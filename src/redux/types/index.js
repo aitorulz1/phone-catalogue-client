@@ -1,0 +1,3 @@
+export const OBTENER_PHONES = 'OBTENER_PHONES'
+export const PHONES_EXITO = 'PHONES_EXITO'
+export const PHONES_ERROR = 'PHONES_ERROR'
