@@ -4,8 +4,16 @@ import reducer from '../reducers/phonesReducer';
 
 
 const store = createStore(
+    reducer,
+    compose(applyMiddleware(thunk),
 
-)
+    typeof window == 'object' &&
+    typeof window.__REDUX_DEVTOOLS_EXTENSION__ !== 'undefined' ?
+        window.__REDUX_DEVTOOLS_EXTENSION__() : f => f
+
+    // Ahora funciona tengamos instalado Redux Dev Tools o no.
+    )
+);
 
 
 export default store;
