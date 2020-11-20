@@ -1,0 +1,13 @@
+.sidebar-header-container {
+    margin: 0 auto;
+    width: 85%;
+    height: 150px;
+    border-bottom: 1px solid #f5f4f2;
+    text-align: center;
+  }
+
+  .sidebar-header-container img {
+    width: 75%;
+    max-width: 275px;
+    padding-top: calc(104px - 52px);
+}

@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
-import Catalog from './components/phones/catalog'
+import Catalog from './components/sidebar/Catalog'
 
 // Redux
 import { Provider } from 'react-redux';
