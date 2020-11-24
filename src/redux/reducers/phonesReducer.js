@@ -19,14 +19,14 @@ export default function(state = initialState, action) {
         case COMENZAR_DESCARGA_PHONES:
             return {
                 ...state,
-                loading: action.payload
+                loading: true
             }
 
         case DESCARGA_PHONES_EXITO:
             return {
                 ...state,
                 loading: false,
-                error: false,
+                error: null,
                 phones: action.payload
             }
 
@@ -35,5 +35,8 @@ export default function(state = initialState, action) {
                 ...state,
                 error: true
             }
+
+            default:
+                return state;
     }
 }

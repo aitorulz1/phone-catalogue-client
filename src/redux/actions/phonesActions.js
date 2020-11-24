@@ -4,7 +4,7 @@ import {
     DESCARGA_PHONES_ERROR
 } from '../types';
 
-import phoneService from '../../service/PhoneService'
+import phoneService from '../../service/PhoneService';
 
 export function obtenerPhonesAction() {
     return async (dispatch) => {
@@ -12,7 +12,7 @@ export function obtenerPhonesAction() {
     
 
     try {
-        const respuesta = await phoneService.get('/phones')
+        const respuesta = await phoneService.get('/phones');
         dispatch ( descargaPhonesExitosa(respuesta.data) )
     } catch (error) {
         dispatch ( descargaProductosError() )

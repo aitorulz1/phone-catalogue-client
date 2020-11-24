@@ -12,7 +12,7 @@ import { obtenerPhonesAction } from '../../redux/actions/phonesActions';
 
 
 
-const Catalog = () => {
+const Phones = () => {
 
 
     const dispatch = useDispatch();
@@ -20,11 +20,14 @@ const Catalog = () => {
     useEffect( () => {
 
         // Consultar la API
-        const cargarPhones = () => dispatch( obtenerPhonesAction() )
+        const cargarPhones = () => dispatch ( obtenerPhonesAction() );
         cargarPhones()
-    }, []);
+        }, [dispatch]);
 
-        // obtener el state
+        // Obtener el state
+        
+        const phones = useSelector( state => state );
+        console.log(phones)
         
 
 
@@ -49,7 +52,7 @@ const Catalog = () => {
                 <PhoneDetail />
 
                 <div className="main-container-inicio">
-                    <img src={logoMain} alt="PhoneCatalogue" />
+                    <img src={logoMain} alt="PhonePhonesue" />
                 </div> 
 
             </div>
@@ -58,4 +61,4 @@ const Catalog = () => {
     )
 }
 
-export default Catalog;
+export default Phones;
