@@ -9,8 +9,6 @@ import phoneService from '../../service/PhoneService';
 export function obtenerPhonesAction() {
     return async (dispatch) => {
         dispatch( obtenerPhones() );
-    
-
     try {
         const respuesta = await phoneService.get('/phones');
         dispatch ( descargaPhonesExitosa(respuesta.data) )

@@ -1,12 +1,10 @@
 import React from 'react';
-import './App.css';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-
 import Catalog from './components/sidebar/Catalog'
 
 // Redux
 import { Provider } from 'react-redux';
-import store from '../src/redux/store'
+import store from '../src/redux/store';
 
 
 function App() {

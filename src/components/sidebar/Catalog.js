@@ -2,7 +2,7 @@ import React, { Fragment, useEffect } from 'react';
 import './Catalog.css';
 import Header from '../layouts/Header';
 import PhoneDetail from '../main/PhoneDetail';
-import logoMain from '../../images/logo-main.png';
+
 
 // Redux
 import { useDispatch, useSelector } from 'react-redux'
@@ -50,10 +50,6 @@ const Phones = () => {
             <div className="main-container-inicio">
 
                 <PhoneDetail />
-
-                <div className="main-container-inicio">
-                    <img src={logoMain} alt="PhonePhonesue" />
-                </div> 
 
             </div>
     
