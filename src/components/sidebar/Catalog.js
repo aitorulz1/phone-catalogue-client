@@ -1,8 +1,8 @@
-import React, { Fragment, useEffect } from 'react';
+import React, { Fragment, useEffect, useState } from 'react';
 import './Catalog.css';
 import Header from '../layouts/Header';
 import PhoneDetail from '../main/PhoneDetail';
-
+import logoMain from '../../images/logo-main.png';
 
 // Redux
 import { useDispatch, useSelector } from 'react-redux'
@@ -14,6 +14,7 @@ import { obtenerPhonesAction } from '../../redux/actions/phonesActions';
 
 const Phones = () => {
 
+    
 
     const dispatch = useDispatch();
 
@@ -26,9 +27,14 @@ const Phones = () => {
 
         // Obtener el state
         
-        const phones = useSelector( state => state );
+        const phones = useSelector( state => state.phones.phones );
         console.log(phones)
-        
+
+        const [id, getId] = useState(null);
+
+        const onClickId = id => {
+            getId(id)
+        }
 
 
     return(
@@ -41,6 +47,15 @@ const Phones = () => {
                 <div className="sidebar-list-container">
                     <div className="sidebar-list">
 
+                    { !phones || phones.length === 0 ? 'Nada que mostrar' 
+                        : 
+                            (
+                                phones.map((phone) => (    
+                                <div key={phone.id} className="select-phone" onClick={() => onClickId(phone.id)}>{phone.name}</div>
+                                ))
+                            )
+                        }
+
                     </div>
                 </div>
 
@@ -49,7 +64,25 @@ const Phones = () => {
 
             <div className="main-container-inicio">
 
-                <PhoneDetail />
+                <div className="main-container-inicio">
+
+                {id !== null ?
+
+                <PhoneDetail
+                    phone={phones[id]}
+                />
+                
+                : 
+                
+                <img src={logoMain} alt="PhoneCatalogue" />
+                
+                }
+                
+                
+                
+                </div>   
+                
+                
 
             </div>
     

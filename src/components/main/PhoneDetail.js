@@ -2,8 +2,9 @@ import React from 'react';
 import './PhoneDetail.css';
 import logoMain from '../../images/logo-main.png';
 
-const PhoneDetail = () => {
-
+const PhoneDetail = ({phone}) => {
+    console.log('hola')
+    console.log(phone)
     return(
 
         <div className="data-container">
