@@ -4,6 +4,8 @@ import Header from '../layouts/Header';
 import PhoneDetail from '../main/PhoneDetail';
 import logoMain from '../../images/logo-main.png';
 
+import PropTypes from 'prop-types';
+
 // Redux
 import { useDispatch, useSelector } from 'react-redux'
 
@@ -21,15 +23,15 @@ const Phones = () => {
     useEffect( () => {
 
         // Consultar la API
-        const cargarPhones = () => dispatch ( obtenerPhonesAction() );
+        const cargarPhones = () => dispatch ( obtenerPhonesAction(phones) );
         cargarPhones()
         }, [dispatch]);
 
-        // Obtener el state
-        
-        const phones = useSelector( state => state.phones.phones );
-        console.log(phones)
 
+        // Obtener el state
+        const phones = useSelector( state => state.phones.phones );
+
+        // Obtener id del objeto
         const [id, getId] = useState(null);
 
         const onClickId = id => {
@@ -64,30 +66,27 @@ const Phones = () => {
 
             <div className="main-container-inicio">
 
-                <div className="main-container-inicio">
+                      {id !== null ?
 
-                {id !== null ?
-
-                <PhoneDetail
-                    phone={phones[id]}
-                />
-                
-                : 
-                
-                <img src={logoMain} alt="PhoneCatalogue" />
-                
-                }
-                
-                
-                
-                </div>   
-                
-                
+                        <PhoneDetail
+                            phone={phones[id]}
+                        />
+                    
+                    : 
+                    
+                        <img src={logoMain} alt="PhoneCatalogue" />
+                    
+                    }
+                             
 
             </div>
     
         </Fragment>
     )
+}
+
+Phones.propTypes = {
+    obtenerPhonesAction: PropTypes.func.isRequired
 }
 
 export default Phones;

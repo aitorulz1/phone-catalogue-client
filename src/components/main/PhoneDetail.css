@@ -3,3 +3,201 @@
     height: 100vh;
     border-left: 1px solid #f5f4f2;
   }
+
+  /*-------------------  Main  -------------------*/
+
+.data-container {
+  background-color: #fff;
+  height: 100vh;
+  border-left: 1px solid #f5f4f2;
+}
+
+
+/* title */
+
+.data-title-container {
+    margin: 0 auto;
+    width: 90%;
+    height: 105px;
+    border-bottom: 1px solid #f5f4f2;
+    text-align: left;
+    font-family: scout;
+    font-size: 40px;
+    padding: 45px 0px 0px 0px;
+}
+
+
+/* phone container */
+
+.phone-data-container{
+  position: relative;
+  width: 100%;
+  display: table;
+}
+
+.phone-container {
+  width: 55%;
+  position: relative;
+  /* height: calc(100vh - 150px); */
+  height: 100vh;
+  float: left;
+  background-color: #f5f4f2;
+  overflow: hidden;
+}
+
+.phone-container img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+/* Data Container */
+
+.info-container{
+  width: 45%;
+  min-width: 300px;
+  float: left;
+  font-family: scout;
+  display: table;
+}
+
+.info {
+    width: 85%;
+    margin: 0 auto;
+    position: relative;
+    padding: 20px 0%;
+}
+
+
+/* manufacturer */
+
+.description-container{
+  width: 100%;
+  display: table;
+  border-bottom: 1px solid #f5f4f2;
+  padding: 20px 0px;
+}
+
+.description-container:last-child{
+  border-bottom: 0px solid #f5f4f2;
+}
+
+.manufacturer{
+  display: block;
+  float: left;
+  font-size: 30px;
+}
+
+.price {
+  float: right;
+  font-size: 30px;
+}
+
+
+/* color */
+
+.color-desc {
+  display: block;
+  font-size: 20px;
+  float: left;
+}
+
+.color-img {
+  display: block;
+  float: right;
+}
+
+.light{
+  font-family: scout-thin;
+}
+
+
+/* Description */
+
+.description-title-dark {
+  font-size: 24px;
+  padding-bottom: 20px;
+}
+
+.description-info {
+  font-family: scout-thin;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.title-dark {
+  display: block;
+  float: left;
+  font-size: 22px;
+}
+
+.desc-info {
+  display: block;
+  float: right;
+  font-family: scout-thin;
+  font-size: 20px;
+}
+
+
+
+
+@media only screen and (max-width: 960px) {
+
+/* Main */
+
+.main-container {
+  position: relative;
+  width: 100% !important;
+  height: 00vh;
+  float: left;
+  background: #354c46;
+}
+
+
+
+/* Title */
+
+.data-title-container {
+  margin: 0 auto;
+  width: 90%;
+  height: 105px;
+  border-bottom: 1px solid #f5f4f2;
+  text-align: center;
+  font-family: scout;
+  font-size: 40px;
+  padding: 45px 0px 0px 0px;
+}
+
+
+
+/* Image */
+
+.phone-container {
+  width: 100%;
+  position: relative;
+  height: auto;
+  float: none;
+  background-color: #f5f4f2;
+  overflow: hidden;
+}
+
+.phone-container img {
+  position: relative;
+  top: 50%;
+  min-width: 250px;
+  width: 30%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+}
+
+.info-container {
+  width: 100%;
+  min-width: 300px;
+  float: none;
+  font-family: scout;
+  display: table;
+}
+
+}

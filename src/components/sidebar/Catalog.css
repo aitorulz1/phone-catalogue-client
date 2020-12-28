@@ -32,20 +32,144 @@
     height: 100vh;
     float: left;
     background:#fff;
-  }
+}
 
-  .main-container-inicio {
+.main-container-inicio {
     position: relative;
     width: 75%;
     height: 100vh;
     float: left;
     background: #354c46;
-  }
+}
   
-  .main-container-inicio img {
+.main-container-inicio img {
       position: relative;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -100%);
+}
+  
+
+
+  /* Sidebar */
+
+.sidebar-header-container {
+        margin: 0 auto;
+        width: 85%;
+        height: 150px;
+        border-bottom: 1px solid #f5f4f2;
+        text-align: center;
+}
+  
+.sidebar-header-container img {
+      width: 75%;
+      max-width: 275px;
+      padding-top: calc(104px - 52px);
+}
+  
+.sidebar-list-container{
+      position: relative;
+      text-align: center;
+      margin: 0 auto;
+      width: 85%;
+      padding: 5% 0%;
+      height: calc(100vh - 190px);
+}
+  
+.sidebar-list{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+  
+}
+  
+  
+  /* Sidebar links*/
+    
+.select-phone{
+        width: 100%;
+        padding: 5% 0%;
+        border-bottom: 1px solid #f5f4f2;
+        font-family: scout;
+        font-size: 20px;
+        color: #39ba96;
+        text-decoration: none;
+        cursor: pointer;
+}
+    
+.select-phone:hover, a:active{
+        color: #000;
+}
+
+
+
+
+
+@media only screen and (max-width: 960px) {
+  
+
+    /* Sidebar */
+  
+  .sidebar-container {
+    position: relative;
+    width: 100%;
+    height: auto;
+    float: left;
+    background: #fff;
+    display: table;
   }
   
+  .sidebar-header-container {
+    margin: 0 auto;
+    width: 85%;
+    height: 115px;
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+  }
+  
+  .sidebar-header-container img {
+    width: 75%;
+    max-width: 275px;
+    padding-top: calc(104px - 79px);
+  }
+  
+  .sidebar-list-container {
+    position: relative;
+    text-align: center;
+    margin: 0 auto;
+    width: 85%;
+    padding: 0% 0%;
+    height: 100%;
+  }
+  
+  .sidebar-list {
+    position: relative;
+    top: 0%;
+    left: 0%;
+    transform: translate(0%, 0%);
+    width: 100%;
+  }
+  
+  .select-phone {
+    width: 50%;
+    padding: 10px 0%;
+    border-bottom: 1px solid #ccc;
+    font-family: scout;
+    font-size: 20px;
+    color: #39ba96;
+    text-decoration: none;
+    cursor: pointer;
+    float: left;
+  }
+
+  .main-container-inicio {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    float: left;
+    background: #354c46;
+}
+  
+}  

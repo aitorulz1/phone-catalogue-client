@@ -11,3 +11,23 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@font-face {
+  font-family: scout;
+  src: url(./font/Scout-Regular.otf);
+}
+
+@font-face {
+  font-family: scout-thin;
+  src: url(./font/Scout-Thin.otf);
+}
+
+ul {
+  display: block;
+  list-style-type: disc;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 0px;
+}
