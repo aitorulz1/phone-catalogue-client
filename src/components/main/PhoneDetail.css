@@ -109,6 +109,10 @@
   float: right;
 }
 
+.color-img img {
+  top: 25px;
+}
+
 .light{
   font-family: scout-thin;
 }
